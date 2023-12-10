@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block navbut %}
+<div class="d-flex align-middle justify-content-center gap-3">
+    <a href="/map">
+        <img src="/static/img/map.png" class="img-fluid rounded-circle" alt="Go to /map"
+             height="30px"
+             width="30px">
+    </a>
+    <a href="/info">
+        <img src="/static/img/info.png" class="img-fluid rounded-circle" alt="Go to /info"
+             height="30px"
+             width="30px">
+    </a>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <br><br>
+    <h1>Welcome to Cost o' Livin'!</h1>
+    <h4>Here, you can find out about the highest and lowest prices on goods and services around the world!</h4>
+    <br>
+    <div class="d-md-flex justify-content-center">
+        <h6>Up to date "leaderboard" (as of 2023):</h6>
+        <br>
+    </div>
+    <div class="d-md-flex justify-content-center">
+        <form method="POST">
+            {{ form.csrf_token }}
+            <div class="form-group">
+                {{ form.data(class="form-control") }}
+            </div>
+            <div class="form-group">
+                {{ form.top(class="form-control") }}
+            </div>
+            <div class="form-group">
+                {{ form.highlow(class="form-control") }}
+            </div>
+            <p>{{ form.submit(type="submit", class="btn btn-outline-dark") }}</p>
+        </form>
+        <br>
+    </div>
+    <div class="d-md-flex justify-content-center">
+        {% if table != None %}
+        <iframe srcdoc="{{ table }}" frameborder="0" scrolling="no" onload="resizeIframe(this)"></iframe>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

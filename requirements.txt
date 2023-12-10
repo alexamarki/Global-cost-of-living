@@ -1,0 +1,6 @@
+wtforms~=3.1.1
+folium~=0.15.1
+pandas~=2.1.4
+geojson~=3.1.0
+flask~=3.0.0
+werkzeug~=3.0.1

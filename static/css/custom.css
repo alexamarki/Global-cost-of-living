@@ -1,0 +1,18 @@
+body{
+    background: #fff3f0;
+}
+.navbar-custom {
+            background-color: #ffbd88;
+        }
+body {
+  margin: 0;
+  padding: 8px;
+  box-sizing: border-box;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+footer {
+  margin-top: auto;
+}
+
