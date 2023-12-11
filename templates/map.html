@@ -26,10 +26,10 @@
                 {{ form.data(class="form-control") }}
             </div>
             <div class="form-group">
-                {{ form.low(class="form-control") }}
+                {{ form.low(class="form-control", , placeholder="Lowest price, USD") }}
             </div>
             <div class="form-group">
-                {{ form.high(class="form-control") }}
+                {{ form.high(class="form-control", placeholder="Highest price, USD") }}
             </div>
             <p>{{ form.submit(type="submit", class="btn btn-outline-dark") }}</p>
         </form>
